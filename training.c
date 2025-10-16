@@ -14,49 +14,54 @@ void info(struct coord pos) {
 int main() {
 
 
-    // struct Car{
-    //     int year;
-    //     char brand[30];
-    //     char model[30];
-    // };
+    struct Car{
+        int year;
+        char brand[30];
+        char model[30];
+    };
 
-    // struct Car myCar;
-    // strcpy(myCar.brand,"Rollce-Royce");
-    // strcpy(myCar.model,"Ghost");
-    // myCar.year = 2017;
+    struct Car myCar;
+    strcpy(myCar.brand,"Rollce-Royce");
+    strcpy(myCar.model,"Ghost");
+    myCar.year = 2017;
 
-    // printf("My Car is %s %s, made in %d", myCar.brand, myCar.model, myCar.year);
+    printf("My Car is %s %s, made in %d", myCar.brand, myCar.model, myCar.year);
 
-    // struct Car cars[2] = {
-    //     {2011, "Honda", "SMTH"},
-    //     {2021, "Hyundai", "Sonata"}
-    // };
+    struct Car cars[2] = {
+        {2011, "Honda", "SMTH"},
+        {2021, "Hyundai", "Sonata"}
+    };
 
-    // typedef struct{
-    //     int year;
-    //     char brand[30];
-    //     char model[30];
-    // } Cars;
+    typedef struct{
+        int year;
+        char brand[30];
+        char model[30];
+    } Cars;
 
-    // Cars cars[3] = {
-    //     {2019, "Chevrolet", "Captiva"},
-    //     {2017, "Mclaren", "S1"},
-    //     {2024, "BMW", "X1"}
-    // };
+    Cars cars[3] = {
+        {2019, "Chevrolet", "Captiva"},
+        {2017, "Mclaren", "S1"},
+        {2024, "BMW", "X1"}
+    };
 
-    // printf("My Car is %s %s, made in %d", cars[0].brand, cars[0].model, cars[0].year);
+    printf("My Car is %s %s, made in %d", cars[0].brand, cars[0].model, cars[0].year);
     
    
     
-    // struct coord cord1;
-    // cord1.x = 123;
-    // cord1.y = 23;
-    // info(cord1);
+    struct coord cord1;
+    cord1.x = 123;
+    cord1.y = 23;
+    info(cord1);
 
     int x = 10;
     int *px = &x;
 
     printf("%d", *px); //derefenring
+
+    float a = 3.14555152352; //6-7 digits
+    double b = 3.14555152352; //clearer 15-16 digits
+    printf("Float: %.10f\n", a);
+    printf("Double: %.10f\n", b);
     
     
     return 0;
